@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://uau1yunjv4xe"]
+
+[ext_resource type="Script" uid="uid://clhuc83ydwdjn" path="res://coin/coin.gd" id="1_vh0lf"]
+[ext_resource type="Texture2D" uid="uid://b5em1v8vlc1vf" path="res://res/Coin_Silver/SilverCoin1.png" id="2_5c7c5"]
+[ext_resource type="Texture2D" uid="uid://cfs1wtmpn88ft" path="res://res/Coin_Silver/SilverCoin2.png" id="3_t2u70"]
+[ext_resource type="Texture2D" uid="uid://colcvnxycnuxg" path="res://res/Coin_Silver/SilverCoin3.png" id="4_7iovm"]
+[ext_resource type="Texture2D" uid="uid://d4iijc72tvlw4" path="res://res/Coin_Silver/SilverCoin4.png" id="5_bv1oj"]
+[ext_resource type="Texture2D" uid="uid://dj4ff2ohrapnl" path="res://res/Coin_Silver/SilverCoin5.png" id="6_xxowj"]
+[ext_resource type="Texture2D" uid="uid://b7s3vkyyolv36" path="res://res/Coin_Silver/SilverCoin6.png" id="7_imwab"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mbxn3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5c7c5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_t2u70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7iovm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bv1oj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xxowj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_imwab")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6glxg"]
+radius = 8.0
+height = 16.0
+
+[node name="Coin" type="Area2D" unique_id=1279399244]
+scale = Vector2(3.1199994, 3.1199994)
+script = ExtResource("1_vh0lf")
+points = null
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1157290443]
+sprite_frames = SubResource("SpriteFrames_mbxn3")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1136451118]
+shape = SubResource("CapsuleShape2D_6glxg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]

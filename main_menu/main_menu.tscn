@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://c8edkam164316"]
+
+[ext_resource type="Script" uid="uid://bptap26esfrb5" path="res://main_menu/main_menu.gd" id="1_oa53l"]
+[ext_resource type="Texture2D" uid="uid://d3rtj85btkv4h" path="res://res/backgrounds/sky_abckground.png" id="2_d3a7t"]
+[ext_resource type="FontFile" uid="uid://bl0ck0jjum75j" path="res://res/fonts/EpilepsySans.ttf" id="3_3shxk"]
+
+[node name="MainMenu" type="CanvasLayer" unique_id=873348075]
+script = ExtResource("1_oa53l")
+
+[node name="SkyAbckground" type="Sprite2D" parent="." unique_id=687193214]
+position = Vector2(304, 240)
+texture = ExtResource("2_d3a7t")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=893464961]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -50.5
+offset_right = 35.0
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=157695377]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Start game" type="Button" parent="MarginContainer/VBoxContainer" unique_id=366688976]
+custom_minimum_size = Vector2(200, 35)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_3shxk")
+theme_override_font_sizes/font_size = 24
+text = "Запуск"
+
+[node name="Settings" type="Button" parent="MarginContainer/VBoxContainer" unique_id=826566885]
+custom_minimum_size = Vector2(200, 35)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("3_3shxk")
+theme_override_font_sizes/font_size = 24
+text = "Настройки"
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1290309888]
+custom_minimum_size = Vector2(200, 35)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_3shxk")
+theme_override_font_sizes/font_size = 24
+text = "Выход"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Start game" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

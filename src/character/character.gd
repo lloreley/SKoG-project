@@ -19,7 +19,6 @@ var coyote_timer = 0.0
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
-
 func _ready() -> void:
 	anim.play("Idle")
 

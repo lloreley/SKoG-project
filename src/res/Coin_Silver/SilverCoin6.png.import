@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7s3vkyyolv36"
-path="res://.godot/imported/SilverCoin6.png-8b25213ed77e350d45705f9940eae0b4.ctex"
+uid="uid://c2n3o133m278d"
+path="res://.godot/imported/SilverCoin6.png-81d5baf47e7679d24f31547aa96875c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/Coin_Silver/SilverCoin6.png"
-dest_files=["res://.godot/imported/SilverCoin6.png-8b25213ed77e350d45705f9940eae0b4.ctex"]
+source_file="res://res/coin_silver/SilverCoin6.png"
+dest_files=["res://.godot/imported/SilverCoin6.png-81d5baf47e7679d24f31547aa96875c2.ctex"]
 
 [params]
 

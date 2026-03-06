@@ -1,57 +1,114 @@
 [gd_scene format=3 uid="uid://c8edkam164316"]
 
 [ext_resource type="Script" uid="uid://bptap26esfrb5" path="res://main_menu/main_menu.gd" id="1_oa53l"]
-[ext_resource type="Texture2D" uid="uid://d3rtj85btkv4h" path="res://res/backgrounds/sky_abckground.png" id="2_d3a7t"]
-[ext_resource type="FontFile" uid="uid://bl0ck0jjum75j" path="res://res/fonts/EpilepsySans.ttf" id="3_3shxk"]
+[ext_resource type="Script" uid="uid://d4d5bgoka6k72" path="res://main_menu/load_btn.gd" id="2_3shxk"]
+[ext_resource type="Script" uid="uid://dvg64nhmpky04" path="res://main_menu/quit_btn.gd" id="2_bws42"]
+[ext_resource type="Script" uid="uid://ca32wtksfvooh" path="res://main_menu/start_btn.gd" id="2_d3a7t"]
+[ext_resource type="Texture2D" uid="uid://dy42bgou1n3pt" path="res://res/backgrounds/main_menu/background_plains-Sheet1.png" id="2_mvfl2"]
+[ext_resource type="Texture2D" uid="uid://bxmvul72lfnt3" path="res://res/backgrounds/main_menu/background_plains-Sheet2.png" id="3_qvn4f"]
+[ext_resource type="Texture2D" uid="uid://cul5odxyyqqxc" path="res://res/backgrounds/main_menu/background_plains-Sheet3.png" id="4_g1omr"]
+[ext_resource type="Script" uid="uid://cdibtows5mahl" path="res://main_menu/settings_btn.gd" id="5_3f7m4"]
+[ext_resource type="Texture2D" uid="uid://bq27pciqt3tak" path="res://res/backgrounds/main_menu/background_plains-Sheet4.png" id="5_kwfav"]
+[ext_resource type="Script" uid="uid://ko71pvgsxrjq" path="res://main_menu/sound_btn.gd" id="6_6tl50"]
+[ext_resource type="Texture2D" uid="uid://rcvh300padrp" path="res://res/backgrounds/main_menu/background_plains-Sheet5.png" id="6_n70vs"]
 
 [node name="MainMenu" type="CanvasLayer" unique_id=873348075]
 script = ExtResource("1_oa53l")
 
-[node name="SkyAbckground" type="Sprite2D" parent="." unique_id=687193214]
-position = Vector2(304, 240)
-texture = ExtResource("2_d3a7t")
+[node name="Parallax2D_1" type="Parallax2D" parent="." unique_id=943505669]
+repeat_size = Vector2(1280, 0)
+autoscroll = Vector2(-10, 0)
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=893464961]
+[node name="Sprite2D_1" type="Sprite2D" parent="Parallax2D_1" unique_id=1083957612]
+scale = Vector2(4, 4)
+texture = ExtResource("2_mvfl2")
+centered = false
+
+[node name="Parallax2D_2" type="Parallax2D" parent="." unique_id=1849819053]
+repeat_size = Vector2(1280, 0)
+autoscroll = Vector2(-15, 0)
+
+[node name="Sprite2D_2" type="Sprite2D" parent="Parallax2D_2" unique_id=995688534]
+scale = Vector2(4, 4)
+texture = ExtResource("3_qvn4f")
+centered = false
+
+[node name="Parallax2D_3" type="Parallax2D" parent="." unique_id=2113594737]
+repeat_size = Vector2(1280, 0)
+autoscroll = Vector2(-20, 0)
+
+[node name="Sprite2D_3" type="Sprite2D" parent="Parallax2D_3" unique_id=140530599]
+scale = Vector2(4, 4)
+texture = ExtResource("4_g1omr")
+centered = false
+
+[node name="Parallax2D_4" type="Parallax2D" parent="." unique_id=2008583828]
+repeat_size = Vector2(1280, 0)
+autoscroll = Vector2(-25, 0)
+
+[node name="Sprite2D_4" type="Sprite2D" parent="Parallax2D_4" unique_id=1442959767]
+scale = Vector2(4, 4)
+texture = ExtResource("5_kwfav")
+centered = false
+
+[node name="Parallax2D_5" type="Parallax2D" parent="." unique_id=264254608]
+repeat_size = Vector2(1280, 0)
+autoscroll = Vector2(-50, 0)
+
+[node name="Sprite2D_5" type="Sprite2D" parent="Parallax2D_5" unique_id=881107071]
+scale = Vector2(4, 4)
+texture = ExtResource("6_n70vs")
+centered = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1320015859]
+custom_minimum_size = Vector2(189, 273)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -35.0
-offset_top = -50.5
-offset_right = 35.0
-offset_bottom = 50.5
+offset_left = -94.5
+offset_top = -136.5
+offset_right = 94.5
+offset_bottom = 136.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=157695377]
+[node name="StartBtn" type="TextureButton" parent="VBoxContainer" unique_id=1155650553]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+script = ExtResource("2_d3a7t")
 
-[node name="Start game" type="Button" parent="MarginContainer/VBoxContainer" unique_id=366688976]
-custom_minimum_size = Vector2(200, 35)
+[node name="LoadBtn" type="TextureButton" parent="VBoxContainer" unique_id=1658142560]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_3shxk")
-theme_override_font_sizes/font_size = 24
-text = "Запуск"
+script = ExtResource("2_3shxk")
 
-[node name="Settings" type="Button" parent="MarginContainer/VBoxContainer" unique_id=826566885]
-custom_minimum_size = Vector2(200, 35)
+[node name="QuitBtn" type="TextureButton" parent="VBoxContainer" unique_id=1798300163]
 layout_mode = 2
-size_flags_vertical = 8
-theme_override_fonts/font = ExtResource("3_3shxk")
-theme_override_font_sizes/font_size = 24
-text = "Настройки"
+script = ExtResource("2_bws42")
 
-[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1290309888]
-custom_minimum_size = Vector2(200, 35)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_3shxk")
-theme_override_font_sizes/font_size = 24
-text = "Выход"
+[node name="SettingsBtn" type="TextureButton" parent="." unique_id=307178503]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = -10.0
+grow_vertical = 0
+script = ExtResource("5_3f7m4")
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Start game" to="." method="_on_start_game_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[node name="SoundBtn" type="TextureButton" parent="." unique_id=601412716]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("6_6tl50")

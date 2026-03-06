@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://l70a2t7atfs2"]
 
 [ext_resource type="PackedScene" uid="uid://b3vefxmwpgosl" path="res://character/character.tscn" id="1_6xmxd"]
-[ext_resource type="Texture2D" uid="uid://d2d814c83sdms" path="res://res/Tiles/Ground1.png" id="2_mmdvd"]
-[ext_resource type="Texture2D" uid="uid://bcwtge5r2olvr" path="res://res/Tiles/StonePlatform1.png" id="3_fn3g3"]
-[ext_resource type="Texture2D" uid="uid://s0m7j22avx2r" path="res://res/Tiles/StonePlatform2.png" id="4_sc4t8"]
-[ext_resource type="Texture2D" uid="uid://xc4yyrlv5qy8" path="res://res/Tiles/StonePlatform3.png" id="5_ai45w"]
-[ext_resource type="PackedScene" uid="uid://b5t37it8xi6fe" path="res://main_menu/in_game_menu.tscn" id="6_fn3g3"]
+[ext_resource type="Texture2D" uid="uid://20aeutemkf53" path="res://res/tiles/Ground1.png" id="2_mmdvd"]
+[ext_resource type="Texture2D" uid="uid://6t3fac6l4okn" path="res://res/tiles/StonePlatform1.png" id="3_fn3g3"]
+[ext_resource type="Texture2D" uid="uid://c7d62hafplxbr" path="res://res/tiles/StonePlatform2.png" id="4_sc4t8"]
+[ext_resource type="Texture2D" uid="uid://mm7t05gcl1w8" path="res://res/tiles/StonePlatform3.png" id="5_ai45w"]
+[ext_resource type="PackedScene" uid="uid://b5t37it8xi6fe" path="res://hud/in_game_menu.tscn" id="6_fn3g3"]
 [ext_resource type="PackedScene" uid="uid://uau1yunjv4xe" path="res://coin/coin.tscn" id="7_sc4t8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4papg"]

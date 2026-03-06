@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://uau1yunjv4xe"]
 
 [ext_resource type="Script" uid="uid://clhuc83ydwdjn" path="res://coin/coin.gd" id="1_vh0lf"]
-[ext_resource type="Texture2D" uid="uid://b5em1v8vlc1vf" path="res://res/Coin_Silver/SilverCoin1.png" id="2_5c7c5"]
-[ext_resource type="Texture2D" uid="uid://cfs1wtmpn88ft" path="res://res/Coin_Silver/SilverCoin2.png" id="3_t2u70"]
-[ext_resource type="Texture2D" uid="uid://colcvnxycnuxg" path="res://res/Coin_Silver/SilverCoin3.png" id="4_7iovm"]
-[ext_resource type="Texture2D" uid="uid://d4iijc72tvlw4" path="res://res/Coin_Silver/SilverCoin4.png" id="5_bv1oj"]
-[ext_resource type="Texture2D" uid="uid://dj4ff2ohrapnl" path="res://res/Coin_Silver/SilverCoin5.png" id="6_xxowj"]
-[ext_resource type="Texture2D" uid="uid://b7s3vkyyolv36" path="res://res/Coin_Silver/SilverCoin6.png" id="7_imwab"]
+[ext_resource type="Texture2D" uid="uid://8vehxrlq2js5" path="res://res/coin_silver/SilverCoin1.png" id="2_5c7c5"]
+[ext_resource type="Texture2D" uid="uid://bxady4a8il3qj" path="res://res/coin_silver/SilverCoin2.png" id="3_t2u70"]
+[ext_resource type="Texture2D" uid="uid://lv5xyjn7firf" path="res://res/coin_silver/SilverCoin3.png" id="4_7iovm"]
+[ext_resource type="Texture2D" uid="uid://dxdw1i3xvjooy" path="res://res/coin_silver/SilverCoin4.png" id="5_bv1oj"]
+[ext_resource type="Texture2D" uid="uid://c626tlrjen21n" path="res://res/coin_silver/SilverCoin5.png" id="6_xxowj"]
+[ext_resource type="Texture2D" uid="uid://c2n3o133m278d" path="res://res/coin_silver/SilverCoin6.png" id="7_imwab"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mbxn3"]
 animations = [{

@@ -102,7 +102,7 @@ func start_screen_fade():
 	fade_tween.finished.connect(_on_fade_finished)
 
 func _on_fade_finished():
-	print("Экран стал черным. Переход в лес...")
+	get_tree().change_scene_to_file("res://levels/level1/level1.tscn")
 
 func _process(_delta):
 	if not is_typing: return

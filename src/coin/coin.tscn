@@ -41,7 +41,6 @@ height = 16.0
 [node name="Coin" type="Area2D" unique_id=1279399244]
 scale = Vector2(3.1199994, 3.1199994)
 script = ExtResource("1_vh0lf")
-points = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1157290443]
 sprite_frames = SubResource("SpriteFrames_mbxn3")

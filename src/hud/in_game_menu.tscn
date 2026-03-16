@@ -8,7 +8,7 @@
 [node name="in_game_menu" type="CanvasLayer" unique_id=524070749]
 script = ExtResource("1_rqu6o")
 
-[node name="Healt" type="Sprite2D" parent="." unique_id=360282402]
+[node name="Health" type="Sprite2D" parent="." unique_id=360282402]
 position = Vector2(65, 21)
 scale = Vector2(2, 2)
 texture = ExtResource("2_meyb6")

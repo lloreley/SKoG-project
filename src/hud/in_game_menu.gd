@@ -1,8 +1,22 @@
 extends CanvasLayer
 
-func _on_to_menu_pressed() -> void:
-	get_tree().change_scene_to_file("res://main_menu/main_menu.tscn")
+@onready var health_sprite: Sprite2D = $Health 
 
-func _ready():
-	for coin in get_tree().get_nodes_in_group("coins"):
-		coin.connect("collected", Callable($HUD, "add_points"))
+# Массив с предзагруженными текстурами (от полного до пустого)
+var health_stages = [
+	preload("res://res/healthbar/HealthBar1.png"), # 100% (4 HP)
+	preload("res://res/healthbar/HealthBar2.png"),
+	preload("res://res/healthbar/HealthBar3.png"),
+	preload("res://res/healthbar/HealthBar4.png"),
+	preload("res://res/healthbar/HealthBar5.png"),
+	preload("res://res/healthbar/HealthBar6.png"),
+	preload("res://res/healthbar/HealthBar7.png"),
+	preload("res://res/healthbar/HealthBar8.png"),
+	preload("res://res/healthbar/HealthBar9.png")  # 0% (Смерть)
+]
+
+func update_health_ui(current_health: float):
+	var index = int((4.0 - current_health) * 2.0)
+	index = clamp(index, 0, 8)
+	
+	health_sprite.texture = health_stages[index]

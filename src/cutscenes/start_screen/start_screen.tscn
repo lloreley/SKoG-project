@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cv6m4agltsnjb" path="res://res/dialog_background/dialog_background.png" id="2_g20ei"]
 [ext_resource type="FontFile" uid="uid://bl0ck0jjum75j" path="res://res/fonts/EpilepsySans.ttf" id="3_7ujsp"]
 [ext_resource type="Script" uid="uid://v07g6eh2rf6h" path="res://cutscenes/start_screen/text_label.gd" id="3_u3apd"]
-[ext_resource type="AudioStream" uid="uid://cjljl1p4dkdr2" path="res://res/sound/beep-5-short.mp3" id="5_u3apd"]
+[ext_resource type="AudioStream" uid="uid://cjljl1p4dkdr2" path="res://res/sound/beep/beep-5-short.mp3" id="5_u3apd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ujsp"]
 texture = ExtResource("2_g20ei")
@@ -46,6 +46,7 @@ script = ExtResource("3_u3apd")
 
 [node name="TypeSound" type="AudioStreamPlayer2D" parent="TextLabel" unique_id=161393784]
 stream = ExtResource("5_u3apd")
+volume_db = -15.0
 
 [node name="FadeOverlay" type="ColorRect" parent="." unique_id=1671316031]
 offset_right = 1280.0

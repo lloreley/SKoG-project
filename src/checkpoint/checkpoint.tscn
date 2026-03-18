@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://c5gi4cxljlq51"]
+
+[ext_resource type="Script" uid="uid://b75rwgmcwiehg" path="res://checkpoint/checkpoint.gd" id="1_8j8mk"]
+[ext_resource type="Texture2D" uid="uid://db31kndnuqxf4" path="res://res/checkpoint/firecamp.png" id="1_kihdf"]
+[ext_resource type="Texture2D" uid="uid://dlnnhyjlxodjw" path="res://res/checkpoint/fire1.png" id="2_60yiy"]
+[ext_resource type="Texture2D" uid="uid://iqxgn5x2nmhq" path="res://res/checkpoint/fire2.png" id="3_8j8mk"]
+[ext_resource type="Texture2D" uid="uid://m1dtwxfcdidk" path="res://res/checkpoint/fire3.png" id="4_02qsg"]
+[ext_resource type="Texture2D" uid="uid://b2dxnys1guu5f" path="res://res/checkpoint/fire4.png" id="5_m005s"]
+[ext_resource type="Texture2D" uid="uid://bffh50w5exken" path="res://res/checkpoint/fire5.png" id="6_8hbo5"]
+[ext_resource type="Texture2D" uid="uid://b4rn0hq2a0cyj" path="res://res/checkpoint/fire6.png" id="7_hgiue"]
+[ext_resource type="Texture2D" uid="uid://q5ja1takfudw" path="res://res/checkpoint/fire7.png" id="8_klp3p"]
+[ext_resource type="Texture2D" uid="uid://cgpcvgt7hh8xq" path="res://res/checkpoint/fire8.png" id="9_n81ya"]
+[ext_resource type="Texture2D" uid="uid://ds0gbprinegxm" path="res://res/buttons/keyboard_e/E_1.png" id="10_auvjd"]
+[ext_resource type="Texture2D" uid="uid://cplyqlmk4vydv" path="res://res/buttons/keyboard_e/E_2.png" id="11_y7swp"]
+[ext_resource type="Texture2D" uid="uid://5unvtx3houef" path="res://res/buttons/keyboard_e/E_3.png" id="12_tyjhw"]
+[ext_resource type="AudioStream" uid="uid://bwyj1s5qtuukx" path="res://res/sound/sfx/active_firecamp.mp3" id="13_60yiy"]
+[ext_resource type="Texture2D" uid="uid://8ll0tqahgxse" path="res://res/light/32x32/32x32 textures (52).png" id="15_02qsg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m76r2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_60yiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8j8mk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_02qsg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_m005s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8hbo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hgiue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_klp3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_n81ya")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gd28g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_auvjd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_y7swp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tyjhw")
+}],
+"loop": true,
+"name": &"press",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46mdu"]
+size = Vector2(177.77777, 92.56143)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3csah"]
+size = Vector2(80, 35.60028)
+
+[node name="Checkpoint" type="Area2D" unique_id=1572987725 groups=["checkpoints"]]
+script = ExtResource("1_8j8mk")
+
+[node name="Campfire" type="Sprite2D" parent="." unique_id=1468637180]
+texture = ExtResource("1_kihdf")
+
+[node name="Fire" type="AnimatedSprite2D" parent="." unique_id=1920103718]
+visible = false
+position = Vector2(-1.3517761, -33.544876)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_m76r2")
+animation = &"on"
+frame_progress = 0.9447489
+
+[node name="EBtn" type="AnimatedSprite2D" parent="." unique_id=1151474684]
+position = Vector2(0, -31.999998)
+scale = Vector2(0.90000004, 0.90000004)
+sprite_frames = SubResource("SpriteFrames_gd28g")
+animation = &"press"
+frame_progress = 0.36115366
+
+[node name="AppearButtonE" type="Area2D" parent="." unique_id=240612708]
+collision_layer = 8
+collision_mask = 3
+
+[node name="AppearButtonECollision" type="CollisionShape2D" parent="AppearButtonE" unique_id=100329719]
+position = Vector2(-1.9073486e-06, -30.347353)
+scale = Vector2(0.90000004, 0.90000004)
+shape = SubResource("RectangleShape2D_46mdu")
+debug_color = Color(0.52577287, 0.41579404, 1, 0.41960785)
+
+[node name="Interact" type="Area2D" parent="." unique_id=2067292583]
+position = Vector2(-32, 32)
+collision_layer = 8
+collision_mask = 3
+
+[node name="InteractCollision" type="CollisionShape2D" parent="Interact" unique_id=1466300662]
+position = Vector2(32, -38.19986)
+shape = SubResource("RectangleShape2D_3csah")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2050124802]
+stream = ExtResource("13_60yiy")
+volume_db = -5.0
+parameters/looping = false
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=710940070]
+position = Vector2(-3.8146973e-06, -24)
+scale = Vector2(5, 4)
+color = Color(0.8039216, 0.3137255, 0, 1)
+texture = ExtResource("15_02qsg")
+
+[connection signal="body_entered" from="AppearButtonE" to="." method="_on_appear_button_e_body_entered"]
+[connection signal="body_exited" from="AppearButtonE" to="." method="_on_appear_button_e_body_exited"]
+[connection signal="body_entered" from="Interact" to="." method="_on_interact_body_entered"]

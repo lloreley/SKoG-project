@@ -1,0 +1,94 @@
+[gd_scene format=4 uid="uid://p4lpc4021dmn"]
+
+[ext_resource type="Script" uid="uid://dxl1i51uplmhd" path="res://cutscenes/die_screen/die_screen.gd" id="1_6d51m"]
+[ext_resource type="Texture2D" uid="uid://d2e5123ffxof8" path="res://res/backgrounds/dark_back.png" id="1_vq3ew"]
+[ext_resource type="Texture2D" uid="uid://cv6m4agltsnjb" path="res://res/dialog_background/dialog_background.png" id="2_mdtcy"]
+[ext_resource type="Script" uid="uid://wwpyr50mi3gn" path="res://cutscenes/die_screen/restart_btn.gd" id="3_khjlw"]
+[ext_resource type="FontFile" uid="uid://bl0ck0jjum75j" path="res://res/fonts/EpilepsySans.ttf" id="3_vvoh0"]
+[ext_resource type="Script" uid="uid://buajlwfuhc1bp" path="res://cutscenes/die_screen/text_label.gd" id="4_m3uf3"]
+[ext_resource type="Script" uid="uid://ndpw6uvdvicg" path="res://cutscenes/die_screen/main_menu_btn.gd" id="4_n7nvx"]
+[ext_resource type="AudioStream" uid="uid://cjljl1p4dkdr2" path="res://res/sound/beep/beep-5-short.mp3" id="5_iuri5"]
+[ext_resource type="AudioStream" uid="uid://fke1qbe18q8t" path="res://res/sound/songs/death_screen.mp3" id="9_6d51m"]
+[ext_resource type="AudioStream" uid="uid://dtk5g35bsibol" path="res://res/sound/sfx/button_hover.mp3" id="10_ad7p2"]
+[ext_resource type="AudioStream" uid="uid://ckck4stdqtpxg" path="res://res/sound/sfx/button_clicked2.mp3" id="11_3w8ka"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ujsp"]
+texture = ExtResource("2_mdtcy")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_h3ijy"]
+sources/0 = SubResource("TileSetAtlasSource_7ujsp")
+
+[node name="DieScreen" type="CanvasLayer" unique_id=488460260]
+script = ExtResource("1_6d51m")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=606315304]
+position = Vector2(640, 360)
+scale = Vector2(4, 4)
+texture = ExtResource("1_vq3ew")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2049946781]
+position = Vector2(-13, -25.000002)
+scale = Vector2(3, 3)
+tile_map_data = PackedByteArray("AAAGAAYAAAAAAAAAAAAGAAcAAAAAAAEAAAAHAAYAAAABAAAAAAAHAAcAAAABAAEAAAAIAAYAAAABAAAAAAAIAAcAAAABAAEAAAAJAAYAAAABAAAAAAAJAAcAAAABAAEAAAAKAAYAAAABAAAAAAAKAAcAAAABAAEAAAALAAYAAAABAAAAAAALAAcAAAABAAEAAAAMAAYAAAABAAAAAAAMAAcAAAABAAEAAAANAAYAAAABAAAAAAANAAcAAAABAAEAAAAOAAYAAAABAAAAAAAOAAcAAAABAAEAAAAPAAYAAAABAAAAAAAPAAcAAAABAAEAAAAQAAYAAAABAAAAAAAQAAcAAAABAAEAAAARAAYAAAABAAAAAAARAAcAAAABAAEAAAASAAYAAAABAAAAAAASAAcAAAABAAEAAAATAAYAAAABAAAAAAATAAcAAAABAAEAAAAUAAYAAAACAAAAAAAUAAcAAAACAAEAAAAGAAgAAAAAAAIAAAAHAAgAAAABAAIAAAAIAAgAAAABAAIAAAAJAAgAAAABAAIAAAAKAAgAAAABAAIAAAALAAgAAAABAAIAAAAMAAgAAAABAAIAAAANAAgAAAABAAIAAAAOAAgAAAABAAIAAAAPAAgAAAABAAIAAAAQAAgAAAABAAIAAAARAAgAAAABAAIAAAASAAgAAAABAAIAAAATAAgAAAABAAIAAAAUAAgAAAACAAIAAAA=")
+tile_set = SubResource("TileSet_h3ijy")
+
+[node name="RestartBtn" type="TextureButton" parent="." unique_id=368818889]
+offset_left = 10.0
+offset_top = 620.0
+offset_right = 292.0
+offset_bottom = 710.0
+script = ExtResource("3_khjlw")
+
+[node name="MainMenuBtn" type="TextureButton" parent="." unique_id=406205717]
+offset_left = 988.0
+offset_top = 620.0
+offset_right = 1270.0
+offset_bottom = 710.0
+script = ExtResource("4_n7nvx")
+
+[node name="TextLabel" type="RichTextLabel" parent="." unique_id=1106487050]
+offset_left = 321.0
+offset_top = 301.0
+offset_right = 947.0
+offset_bottom = 404.0
+theme_override_fonts/normal_font = ExtResource("3_vvoh0")
+theme_override_font_sizes/normal_font_size = 32
+scroll_active = false
+script = ExtResource("4_m3uf3")
+
+[node name="TypeSound" type="AudioStreamPlayer2D" parent="TextLabel" unique_id=161393784]
+stream = ExtResource("5_iuri5")
+volume_db = -15.0
+
+[node name="FadeOverlay" type="ColorRect" parent="." unique_id=1671316031]
+visible = false
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=597260311]
+stream = ExtResource("9_6d51m")
+volume_db = -15.0
+autoplay = true
+parameters/looping = true
+
+[node name="HoverSound" type="AudioStreamPlayer" parent="." unique_id=1803746127]
+stream = ExtResource("10_ad7p2")
+volume_db = 5.0
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="." unique_id=992382513]
+stream = ExtResource("11_3w8ka")
+volume_db = -10.0
+
+[connection signal="pressed" from="RestartBtn" to="RestartBtn" method="_on_pressed"]
+[connection signal="pressed" from="MainMenuBtn" to="MainMenuBtn" method="_on_pressed"]

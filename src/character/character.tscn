@@ -7,19 +7,29 @@
 [ext_resource type="Texture2D" uid="uid://cafw221j73jv1" path="res://res/character/idle/Character_Idle4.png" id="5_wy5t8"]
 [ext_resource type="Texture2D" uid="uid://dqqfu58pp2bdk" path="res://res/character/idle/Character_Idle5.png" id="6_dy06j"]
 [ext_resource type="Texture2D" uid="uid://d2qmtlvvqryag" path="res://res/character/jump/Character_Jump1.png" id="8_hq3og"]
+[ext_resource type="Texture2D" uid="uid://coey4hwvhf8xm" path="res://res/character/die/die1.png" id="8_psflj"]
 [ext_resource type="Texture2D" uid="uid://cf2yf1kqlvvxy" path="res://res/character/run/Run1.png" id="9_6kuvt"]
+[ext_resource type="Texture2D" uid="uid://gmhsm5wn2nly" path="res://res/character/die/die2.png" id="9_h0hwg"]
 [ext_resource type="Texture2D" uid="uid://buvdxsrtphayi" path="res://res/character/jump/Character_Jump3.png" id="9_orckd"]
 [ext_resource type="Texture2D" uid="uid://4rt25l7mwg2x" path="res://res/character/walk/Character_Walk1.png" id="10_1dqym"]
 [ext_resource type="Texture2D" uid="uid://7dfroyy88xjv" path="res://res/character/run/Run2.png" id="10_6610h"]
+[ext_resource type="Texture2D" uid="uid://b8wnnq23uhpwa" path="res://res/character/die/die3.png" id="10_iaewr"]
 [ext_resource type="Texture2D" uid="uid://ne43gnxwm5ds" path="res://res/character/run/Run3.png" id="11_0shic"]
+[ext_resource type="Texture2D" uid="uid://b6lfd14xl24ty" path="res://res/character/die/die4.png" id="11_5tbnp"]
 [ext_resource type="Texture2D" uid="uid://c1tixmahbimno" path="res://res/character/walk/Character_Walk2.png" id="11_6kuvt"]
 [ext_resource type="Texture2D" uid="uid://dfumbgeqgusjx" path="res://res/character/walk/Character_Walk3.png" id="12_6610h"]
 [ext_resource type="Texture2D" uid="uid://gdepe8jxllqv" path="res://res/character/run/Run4.png" id="12_mbhnd"]
+[ext_resource type="Texture2D" uid="uid://dwb863btws0v4" path="res://res/character/die/die5.png" id="12_yp81j"]
 [ext_resource type="Texture2D" uid="uid://c4yp0vhw1643v" path="res://res/character/walk/Character_Walk4.png" id="13_0shic"]
 [ext_resource type="Texture2D" uid="uid://cxcodr27mbqc4" path="res://res/character/run/Run5.png" id="13_wlm6a"]
 [ext_resource type="Texture2D" uid="uid://bppnodfy32bfw" path="res://res/character/walk/Character_Walk5.png" id="14_mbhnd"]
+[ext_resource type="PackedScene" uid="uid://kbuxe7sni2pt" path="res://character/dash_ghost.tscn" id="19_4ekbm"]
 [ext_resource type="Script" uid="uid://bfvcvg6gkedy3" path="res://character/camera_2d.gd" id="19_6610h"]
 [ext_resource type="Texture2D" uid="uid://b4v4wtr2dvqil" path="res://res/character/dust/dust_particle.png" id="20_0shic"]
+[ext_resource type="AudioStream" uid="uid://dlqoyqrmhol4w" path="res://res/sound/sfx/player/footstep.wav" id="21_mbhnd"]
+[ext_resource type="AudioStream" uid="uid://db1mdn1wpx203" path="res://res/sound/sfx/player/jump.wav" id="22_5s0vb"]
+[ext_resource type="AudioStream" uid="uid://csa46p4yd6kfu" path="res://res/sound/sfx/player/dash.wav" id="23_4ekbm"]
+[ext_resource type="AudioStream" uid="uid://4nodmcdm65qs" path="res://res/sound/sfx/player/damage.wav" id="24_kxp0i"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1l1n4"]
 radius = 23.203644
@@ -45,6 +55,26 @@ animations = [{
 }],
 "loop": true,
 "name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_psflj")
+}, {
+"duration": 2.0,
+"texture": ExtResource("9_h0hwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_iaewr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5tbnp")
+}, {
+"duration": 6.0,
+"texture": ExtResource("12_yp81j")
+}],
+"loop": false,
+"name": &"die",
 "speed": 5.0
 }, {
 "frames": [{
@@ -119,6 +149,7 @@ colors = PackedColorArray(1, 1, 1, 0.67058825, 1, 1, 1, 1)
 process_mode = 1
 position = Vector2(90, 79)
 script = ExtResource("1_yf0e5")
+ghost_node = ExtResource("19_4ekbm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=905179400]
 process_mode = 1
@@ -130,8 +161,9 @@ process_mode = 1
 position = Vector2(2, -3)
 scale = Vector2(1.984375, 2.074219)
 sprite_frames = SubResource("SpriteFrames_qkjfd")
-animation = &"Idle"
-frame_progress = 0.95402455
+animation = &"die"
+frame = 4
+frame_progress = 1.0
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1616355702]
@@ -154,7 +186,7 @@ script = ExtResource("19_6610h")
 [node name="RunDust" type="CPUParticles2D" parent="." unique_id=1632621680]
 position = Vector2(-10.5381775, 51.919815)
 emitting = false
-amount = 40
+amount = 20
 texture = ExtResource("20_0shic")
 lifetime = 0.6
 preprocess = 0.1
@@ -168,7 +200,7 @@ color_ramp = SubResource("Gradient_mbhnd")
 [node name="JumpDust" type="CPUParticles2D" parent="." unique_id=655467895]
 position = Vector2(2.827324, 50.63466)
 emitting = false
-amount = 30
+amount = 15
 texture = ExtResource("20_0shic")
 lifetime = 0.4
 one_shot = true
@@ -179,3 +211,17 @@ initial_velocity_min = 30.0
 initial_velocity_max = 50.0
 scale_amount_curve = SubResource("Curve_0shic")
 color_ramp = SubResource("Gradient_mbhnd")
+
+[node name="Footsteps" type="AudioStreamPlayer2D" parent="." unique_id=1968119490]
+stream = ExtResource("21_mbhnd")
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=1384600234]
+stream = ExtResource("22_5s0vb")
+
+[node name="DashSound" type="AudioStreamPlayer2D" parent="." unique_id=321429977]
+stream = ExtResource("23_4ekbm")
+
+[node name="HurtSound" type="AudioStreamPlayer2D" parent="." unique_id=764795460]
+stream = ExtResource("24_kxp0i")
+
+[node name="FootstepTimer" type="Timer" parent="." unique_id=1356417361]

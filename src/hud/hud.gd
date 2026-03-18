@@ -1,12 +1,8 @@
 extends Label
 
-var points: int = 0
-
 func _ready():
-	text = str(points)
+	ScoreManager.score_updated.connect(_on_score_updated)
+	text = str(ScoreManager.total_score)
 
-func add_points(amount: int) -> void:
-	points += amount
-	print("here")
-	text = str(points)
-	print("Текущие очки:", points)  # проверка
+func _on_score_updated(new_score: int):
+	text = str(new_score)

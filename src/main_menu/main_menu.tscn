@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://bq27pciqt3tak" path="res://res/backgrounds/main_menu/background_plains-Sheet4.png" id="5_kwfav"]
 [ext_resource type="Script" uid="uid://ko71pvgsxrjq" path="res://main_menu/sound_btn.gd" id="6_6tl50"]
 [ext_resource type="Texture2D" uid="uid://rcvh300padrp" path="res://res/backgrounds/main_menu/background_plains-Sheet5.png" id="6_n70vs"]
+[ext_resource type="AudioStream" uid="uid://y3k042lad1dy" path="res://res/sound/songs/main_menu_song.mp3" id="12_qvn4f"]
+[ext_resource type="AudioStream" uid="uid://dtk5g35bsibol" path="res://res/sound/sfx/button_hover.mp3" id="13_g1omr"]
+[ext_resource type="AudioStream" uid="uid://ckck4stdqtpxg" path="res://res/sound/sfx/button_clicked2.mp3" id="14_kwfav"]
 
 [node name="MainMenu" type="CanvasLayer" unique_id=873348075]
 script = ExtResource("1_oa53l")
@@ -112,3 +115,17 @@ offset_bottom = -10.0
 grow_horizontal = 0
 grow_vertical = 0
 script = ExtResource("6_6tl50")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=866927786]
+stream = ExtResource("12_qvn4f")
+volume_db = -15.0
+autoplay = true
+parameters/looping = true
+
+[node name="HoverSound" type="AudioStreamPlayer" parent="." unique_id=1341951740]
+stream = ExtResource("13_g1omr")
+volume_db = 5.0
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="." unique_id=1355095792]
+stream = ExtResource("14_kwfav")
+volume_db = -10.0

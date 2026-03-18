@@ -31,8 +31,12 @@ func _on_continue_btn_pressed():
 
 func _on_restart_btn_pressed():
 	get_tree().paused = false
+	ScoreManager.total_score = 0
+	ScoreManager.score_updated.emit(0)
 	get_tree().reload_current_scene()
 
 func _on_to_main_menu_btn_pressed():
 	get_tree().paused = false
+	ScoreManager.total_score = 0
+	ScoreManager.score_updated.emit(0)
 	get_tree().change_scene_to_file("res://main_menu/main_menu.tscn")

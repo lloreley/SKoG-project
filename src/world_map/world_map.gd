@@ -25,7 +25,11 @@ func _on_button_pressed() -> void:
 	if click_sound:
 		click_sound.play()
 
-
 func _on_zero_level_btn_pressed() -> void:
+	await get_tree().create_timer(0.4).timeout
+	get_tree().change_scene_to_file("res://levels/level0/level0.tscn")
+
+
+func _on_first_level_btn_pressed() -> void:
 	await get_tree().create_timer(0.4).timeout
 	get_tree().change_scene_to_file("res://cutscenes/start_screen/start_screen.tscn")

@@ -197,14 +197,14 @@ b = Vector2(27.696838, -4.507309)
 height = 48.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wwp4p"]
-size = Vector2(640, 192)
+size = Vector2(512, 120)
 
 [node name="Skeleton" type="CharacterBody2D" unique_id=1906924527 groups=["enemies"]]
 script = ExtResource("1_xjgel")
 
 [node name="FloorChecker" type="RayCast2D" parent="." unique_id=1573789973]
 position = Vector2(0, 16)
-target_position = Vector2(0, 100)
+target_position = Vector2(16, 96)
 collide_with_areas = true
 
 [node name="WallChecker" type="RayCast2D" parent="." unique_id=1994111168]
@@ -231,13 +231,12 @@ position = Vector2(-7.009041, 7.748783)
 shape = SubResource("CapsuleShape2D_2enca")
 
 [node name="DetectionArea" type="Area2D" parent="." unique_id=1920441070]
-visible = false
 position = Vector2(-4.4383926, -8)
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=571058285]
-position = Vector2(4.4383926, 8)
+position = Vector2(4.4383926, 4)
 shape = SubResource("RectangleShape2D_wwp4p")
 debug_color = Color(0.9644005, 2.7915835e-06, 0.4958591, 0.41960785)
 

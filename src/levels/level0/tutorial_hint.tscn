@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://npq3ygu7la63"]
+
+[ext_resource type="Script" uid="uid://xca48w3xmoxa" path="res://levels/level0/tutorial_hint.gd" id="1_m3njh"]
+[ext_resource type="FontFile" uid="uid://bl0ck0jjum75j" path="res://res/fonts/EpilepsySans.ttf" id="2_gkfic"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h65gt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="TutorialHint" type="Node2D" unique_id=1422868463]
+script = ExtResource("1_m3njh")
+
+[node name="Label" type="Label" parent="." unique_id=605147412]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_gkfic")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=365313797]
+sprite_frames = SubResource("SpriteFrames_h65gt")

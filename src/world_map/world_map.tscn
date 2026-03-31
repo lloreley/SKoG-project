@@ -517,7 +517,6 @@ offset_left = 546.0
 offset_top = 148.0
 offset_right = 636.0
 offset_bottom = 238.0
-disabled = true
 script = ExtResource("72_erk61")
 
 [node name="SecondLevelBtn" type="TextureButton" parent="." unique_id=1352637639]
@@ -525,7 +524,6 @@ offset_left = 358.0
 offset_top = 338.0
 offset_right = 448.0
 offset_bottom = 428.0
-disabled = true
 script = ExtResource("73_vgeoc")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1806971604]
@@ -551,3 +549,4 @@ stream = ExtResource("74_erk61")
 volume_db = -10.0
 
 [connection signal="pressed" from="ZeroLevelBtn" to="." method="_on_zero_level_btn_pressed"]
+[connection signal="pressed" from="FirstLevelBtn" to="." method="_on_first_level_btn_pressed"]

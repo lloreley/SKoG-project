@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://xca48w3xmoxa" path="res://levels/level0/tutorial_hint.gd" id="1_m3njh"]
 [ext_resource type="FontFile" uid="uid://bl0ck0jjum75j" path="res://res/fonts/EpilepsySans.ttf" id="2_gkfic"]
+[ext_resource type="Texture2D" uid="uid://csmm7xkp3256a" path="res://res/buttons/keyboard_a/A_1.png" id="3_qivix"]
+[ext_resource type="Texture2D" uid="uid://tqwsp4aheftm" path="res://res/buttons/keyboard_a/A_2.png" id="4_mrxwl"]
+[ext_resource type="Texture2D" uid="uid://brva6ljn1gbcm" path="res://res/buttons/keyboard_a/A_3.png" id="5_16mdy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h65gt"]
 animations = [{
@@ -18,15 +21,43 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qivix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mrxwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_16mdy")
+}],
+"loop": true,
+"name": &"test",
+"speed": 5.0
 }]
 
-[node name="TutorialHint" type="Node2D" unique_id=1422868463]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qivix"]
+resource_local_to_scene = true
+size = Vector2(98, 20)
+
+[node name="DynamicTutorialHint" type="Area2D" unique_id=708590808]
+collision_mask = 2
 script = ExtResource("1_m3njh")
 
 [node name="Label" type="Label" parent="." unique_id=605147412]
+top_level = true
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_fonts/font = ExtResource("2_gkfic")
+text = "Передвигайся!"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=365313797]
+position = Vector2(45, 31)
 sprite_frames = SubResource("SpriteFrames_h65gt")
+frame_progress = 0.9467934
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1677400926]
+position = Vector2(47, 56)
+shape = SubResource("RectangleShape2D_qivix")
+debug_color = Color(0.63549435, 0.5274991, 1.92523e-07, 0.41960785)

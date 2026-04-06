@@ -6,7 +6,7 @@
 resource_local_to_scene = true
 size = Vector2(384, 384)
 
-[node name="CameraZone" type="Area2D" unique_id=942935180]
+[node name="CameraZone" type="Area2D" unique_id=2034305321]
 collision_mask = 2
 script = ExtResource("1_6c0tx")
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnvuoo2dvdy1v"
-path="res://.godot/imported/map49.png-3c6357db1ecbfa1d902d969989c0e60f.ctex"
+path="res://.godot/imported/map49.png-d3e896778cd8d65ba68e1993d56937e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/tiles/world_map/map49.png"
-dest_files=["res://.godot/imported/map49.png-3c6357db1ecbfa1d902d969989c0e60f.ctex"]
+source_file="res://res/Tiles/world_map/map49.png"
+dest_files=["res://.godot/imported/map49.png-d3e896778cd8d65ba68e1993d56937e8.ctex"]
 
 [params]
 

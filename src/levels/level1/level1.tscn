@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b3h8syb5c7gx6" path="res://res/backgrounds/forest/WOODS - Second.png" id="4_f7y8c"]
 [ext_resource type="Texture2D" uid="uid://covkanyseuvvw" path="res://res/backgrounds/forest/BUSH - BACKGROUND.png" id="5_xc23s"]
 [ext_resource type="Texture2D" uid="uid://87uwribnh16s" path="res://res/backgrounds/forest/WOODS - First.png" id="6_n5g8f"]
-[ext_resource type="Texture2D" uid="uid://cxauaqirap3g8" path="res://res/tiles/Tilesheet - WOODS.png" id="9_qugyr"]
+[ext_resource type="Texture2D" uid="uid://cxauaqirap3g8" path="res://res/Tiles/Tilesheet - WOODS.png" id="9_qugyr"]
 [ext_resource type="Texture2D" uid="uid://c63cmlse612qi" path="res://res/decorations/forest/GRASS 1-2.png" id="10_f7y8c"]
 [ext_resource type="Texture2D" uid="uid://i7flwtp7b4d6" path="res://res/decorations/forest/MUSHROOM 1-1.png" id="11_xc23s"]
 [ext_resource type="Texture2D" uid="uid://8ll0tqahgxse" path="res://res/light/32x32/32x32 textures (52).png" id="13_bntk2"]
@@ -604,11 +604,11 @@ distance = -64.0
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ke4hf"]
 normal = Vector2(-1, 0)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ee0tc"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0akt"]
 resource_local_to_scene = true
 size = Vector2(9152, 856)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sce53"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ee0tc"]
 resource_local_to_scene = true
 size = Vector2(2368, 616)
 
@@ -834,7 +834,7 @@ scale = Vector2(2, 2)
 collision_layer = 8
 collision_mask = 3
 
-[node name="Character" parent="." unique_id=50862932 groups=["player"] instance=ExtResource("1_c6lro")]
+[node name="Character" parent="." unique_id=50862932 groups=["Player"] instance=ExtResource("1_c6lro")]
 position = Vector2(88, 360)
 collision_layer = 2
 collision_mask = 13
@@ -1415,7 +1415,7 @@ visible = false
 
 [node name="CollisionShape2D" parent="CameraZone" index="0" unique_id=1923577129]
 position = Vector2(4576, 116)
-shape = SubResource("RectangleShape2D_ee0tc")
+shape = SubResource("RectangleShape2D_x0akt")
 
 [node name="CameraZone3" parent="." unique_id=174845818 instance=ExtResource("32_x0akt")]
 visible = false
@@ -1423,7 +1423,7 @@ position = Vector2(384, 472)
 
 [node name="CollisionShape2D" parent="CameraZone3" index="0" unique_id=1923577129]
 position = Vector2(1696, 348)
-shape = SubResource("RectangleShape2D_sce53")
+shape = SubResource("RectangleShape2D_ee0tc")
 
 [connection signal="body_entered" from="LeaveZone" to="." method="_on_leave_zone_body_entered"]
 

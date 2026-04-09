@@ -39,4 +39,5 @@ func _on_to_main_menu_btn_pressed():
 	get_tree().paused = false
 	ScoreManager.total_score = 0
 	ScoreManager.score_updated.emit(0)
+	MusicManager.play_menu_music() # Музыка включится обратно
 	get_tree().change_scene_to_file("res://main_menu/main_menu.tscn")

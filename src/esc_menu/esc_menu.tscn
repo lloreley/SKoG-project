@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dcvusds4hdryt"]
 
 [ext_resource type="Script" uid="uid://kf8efqt21hv7" path="res://esc_menu/esc_menu.gd" id="1_04o2e"]
-[ext_resource type="Script" uid="uid://dv558lbjed7vb" path="res://esc_menu/settings_btn.gd" id="1_cuycv"]
 [ext_resource type="Script" uid="uid://np0vk4mlqvo6" path="res://esc_menu/continue_btn.gd" id="1_wt17o"]
 [ext_resource type="Script" uid="uid://ccqvy2dcv2hav" path="res://esc_menu/sound_btn.gd" id="2_7w56e"]
 [ext_resource type="Script" uid="uid://d0pl4lva8s2s" path="res://esc_menu/restart_btn.gd" id="2_77jpi"]
@@ -41,13 +40,6 @@ script = ExtResource("2_77jpi")
 [node name="ToMainMenuBtn" type="TextureButton" parent="VBoxContainer" unique_id=561807240]
 layout_mode = 2
 script = ExtResource("3_00ev8")
-
-[node name="SettingsBtn" type="TextureButton" parent="." unique_id=1116817997]
-offset_left = 10.0
-offset_top = 620.0
-offset_right = 100.0
-offset_bottom = 710.0
-script = ExtResource("1_cuycv")
 
 [node name="SoundBtn" type="TextureButton" parent="." unique_id=1912500174]
 offset_left = 1180.0

@@ -204,7 +204,7 @@ script = ExtResource("1_xjgel")
 
 [node name="FloorChecker" type="RayCast2D" parent="." unique_id=1573789973]
 position = Vector2(0, 16)
-target_position = Vector2(16, 96)
+target_position = Vector2(0, 56)
 collide_with_areas = true
 
 [node name="WallChecker" type="RayCast2D" parent="." unique_id=1994111168]

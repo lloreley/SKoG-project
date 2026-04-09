@@ -13,4 +13,5 @@ func _on_pressed() -> void:
 	await get_tree().create_timer(0.4).timeout
 	ScoreManager.total_score = 0
 	ScoreManager.score_updated.emit(0)
+	MusicManager.play_menu_music()
 	get_tree().change_scene_to_file("res://main_menu/main_menu.tscn")

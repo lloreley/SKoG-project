@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm2hhfetka0by"
-path="res://.godot/imported/ledder.png-de27563f6d18183790f872f8d40d0afe.ctex"
+path="res://.godot/imported/ledder.png-3ffb021b443f2db5e0612a69a706d0ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/Tiles/ledder.png"
-dest_files=["res://.godot/imported/ledder.png-de27563f6d18183790f872f8d40d0afe.ctex"]
+source_file="res://res/tiles/ledder.png"
+dest_files=["res://.godot/imported/ledder.png-3ffb021b443f2db5e0612a69a706d0ed.ctex"]
 
 [params]
 

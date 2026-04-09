@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6t3fac6l4okn"
-path="res://.godot/imported/StonePlatform1.png-a372ca499f875b29c49677b07cb2ff28.ctex"
+path="res://.godot/imported/StonePlatform1.png-c18de1387e77b06cdebae0fde503bc04.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://res/Tiles/StonePlatform1.png"
-dest_files=["res://.godot/imported/StonePlatform1.png-a372ca499f875b29c49677b07cb2ff28.ctex"]
+source_file="res://res/tiles/StonePlatform1.png"
+dest_files=["res://.godot/imported/StonePlatform1.png-c18de1387e77b06cdebae0fde503bc04.ctex"]
 
 [params]
 

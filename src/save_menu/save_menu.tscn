@@ -1,0 +1,222 @@
+[gd_scene format=4 uid="uid://csv3rbusok4b3"]
+
+[ext_resource type="Script" uid="uid://b8nbaejlq5m5f" path="res://save_menu/save_menu.gd" id="1_b67fv"]
+[ext_resource type="Texture2D" uid="uid://cu5emuupokf7e" path="res://res/buttons/start/start1.png" id="2_0yitc"]
+[ext_resource type="Texture2D" uid="uid://dy42bgou1n3pt" path="res://res/backgrounds/main_menu/background_plains-Sheet1.png" id="2_4u4s5"]
+[ext_resource type="Texture2D" uid="uid://bxmvul72lfnt3" path="res://res/backgrounds/main_menu/background_plains-Sheet2.png" id="3_jkran"]
+[ext_resource type="Texture2D" uid="uid://cklqro2wrvlnj" path="res://res/buttons/start/start2.png" id="3_sp82r"]
+[ext_resource type="Texture2D" uid="uid://b5tnh2gpy45y6" path="res://res/buttons/start/start3.png" id="4_qiq50"]
+[ext_resource type="Texture2D" uid="uid://cul5odxyyqqxc" path="res://res/backgrounds/main_menu/background_plains-Sheet3.png" id="4_vxdyi"]
+[ext_resource type="Texture2D" uid="uid://bq27pciqt3tak" path="res://res/backgrounds/main_menu/background_plains-Sheet4.png" id="5_3f31v"]
+[ext_resource type="Texture2D" uid="uid://rcvh300padrp" path="res://res/backgrounds/main_menu/background_plains-Sheet5.png" id="6_1anqa"]
+[ext_resource type="AudioStream" uid="uid://dtk5g35bsibol" path="res://res/sound/sfx/button_hover.mp3" id="7_cb3wi"]
+[ext_resource type="Texture2D" uid="uid://ts034svh1x6f" path="res://res/buttons/load/load3.png" id="7_gqu7d"]
+[ext_resource type="AudioStream" uid="uid://ckck4stdqtpxg" path="res://res/sound/sfx/button_clicked2.mp3" id="8_di2pa"]
+[ext_resource type="Texture2D" uid="uid://cv6m4agltsnjb" path="res://res/dialog_background/dialog_background.png" id="9_1anqa"]
+[ext_resource type="Texture2D" uid="uid://csybqpus6wk4p" path="res://res/buttons/load/load1.png" id="10_cb3wi"]
+[ext_resource type="Texture2D" uid="uid://b845m4s8mv7x2" path="res://res/buttons/quit/quit3.png" id="11_di2pa"]
+[ext_resource type="Texture2D" uid="uid://dayjt8oytii14" path="res://res/buttons/load/load2.png" id="12_a280f"]
+[ext_resource type="Script" uid="uid://d4d5bgoka6k72" path="res://main_menu/load_btn.gd" id="13_0yitc"]
+[ext_resource type="Texture2D" uid="uid://wqhyklk32rxg" path="res://res/buttons/cancel/cancel1.png" id="18_gqu7d"]
+[ext_resource type="Texture2D" uid="uid://cbgjpwah2npiu" path="res://res/buttons/cancel/cancel2.png" id="19_a2xko"]
+[ext_resource type="FontFile" uid="uid://bl0ck0jjum75j" path="res://res/fonts/EpilepsySans.ttf" id="20_a2xko"]
+[ext_resource type="Script" uid="uid://jfmnev76y5cw" path="res://settings/cancel_btn.gd" id="20_rxifb"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sp82r"]
+texture = ExtResource("9_1anqa")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qiq50"]
+sources/0 = SubResource("TileSetAtlasSource_sp82r")
+
+[node name="SaveMenu" type="CanvasLayer" unique_id=1691860298]
+script = ExtResource("1_b67fv")
+tex_new_normal = ExtResource("2_0yitc")
+tex_new_hover = ExtResource("3_sp82r")
+tex_new_pressed = ExtResource("4_qiq50")
+tex_load_normal = ExtResource("10_cb3wi")
+tex_load_hover = ExtResource("12_a280f")
+tex_load_pressed = ExtResource("7_gqu7d")
+tex_del_normal = ExtResource("18_gqu7d")
+tex_del_pressed = ExtResource("19_a2xko")
+tex_del_disabled = ExtResource("19_a2xko")
+
+[node name="Parallax2D_1" type="Parallax2D" parent="." unique_id=682089160]
+repeat_size = Vector2(1280, 0)
+autoscroll = Vector2(-10, 0)
+
+[node name="Sprite2D_1" type="Sprite2D" parent="Parallax2D_1" unique_id=1202767566]
+scale = Vector2(4, 4)
+texture = ExtResource("2_4u4s5")
+centered = false
+
+[node name="Parallax2D_2" type="Parallax2D" parent="." unique_id=676094917]
+repeat_size = Vector2(1280, 0)
+autoscroll = Vector2(-15, 0)
+
+[node name="Sprite2D_2" type="Sprite2D" parent="Parallax2D_2" unique_id=96788123]
+scale = Vector2(4, 4)
+texture = ExtResource("3_jkran")
+centered = false
+
+[node name="Parallax2D_3" type="Parallax2D" parent="." unique_id=744201382]
+repeat_size = Vector2(1280, 0)
+autoscroll = Vector2(-20, 0)
+
+[node name="Sprite2D_3" type="Sprite2D" parent="Parallax2D_3" unique_id=2120254342]
+scale = Vector2(4, 4)
+texture = ExtResource("4_vxdyi")
+centered = false
+
+[node name="Parallax2D_4" type="Parallax2D" parent="." unique_id=1499403063]
+repeat_size = Vector2(1280, 0)
+autoscroll = Vector2(-25, 0)
+
+[node name="Sprite2D_4" type="Sprite2D" parent="Parallax2D_4" unique_id=483309878]
+scale = Vector2(4, 4)
+texture = ExtResource("5_3f31v")
+centered = false
+
+[node name="Parallax2D_5" type="Parallax2D" parent="." unique_id=2053825781]
+repeat_size = Vector2(1280, 0)
+autoscroll = Vector2(-50, 0)
+
+[node name="Sprite2D_5" type="Sprite2D" parent="Parallax2D_5" unique_id=428660034]
+scale = Vector2(4, 4)
+texture = ExtResource("6_1anqa")
+centered = false
+
+[node name="HoverSound" type="AudioStreamPlayer" parent="." unique_id=553873260]
+stream = ExtResource("7_cb3wi")
+volume_db = 5.0
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="." unique_id=732246952]
+stream = ExtResource("8_di2pa")
+volume_db = -10.0
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1516955295]
+position = Vector2(-26, -45)
+scale = Vector2(3, 3)
+tile_map_data = PackedByteArray("AAALAAUAAAAAAAAAAAALAAYAAAAAAAEAAAALAAcAAAAAAAEAAAALAAgAAAAAAAEAAAALAAkAAAAAAAEAAAALAAoAAAAAAAEAAAALAAsAAAAAAAIAAAAMAAUAAAABAAAAAAAMAAYAAAABAAEAAAAMAAcAAAABAAEAAAAMAAgAAAABAAEAAAAMAAkAAAABAAEAAAAMAAoAAAABAAEAAAAMAAsAAAABAAIAAAANAAUAAAABAAAAAAANAAYAAAABAAEAAAANAAcAAAABAAEAAAANAAgAAAABAAEAAAANAAkAAAABAAEAAAANAAoAAAABAAEAAAANAAsAAAABAAIAAAAOAAUAAAABAAAAAAAOAAYAAAABAAEAAAAOAAcAAAABAAEAAAAOAAgAAAABAAEAAAAOAAkAAAABAAEAAAAOAAoAAAABAAEAAAAOAAsAAAABAAIAAAAPAAUAAAABAAAAAAAPAAYAAAABAAEAAAAPAAcAAAABAAEAAAAPAAgAAAABAAEAAAAPAAkAAAABAAEAAAAPAAoAAAABAAEAAAAPAAsAAAABAAIAAAAQAAUAAAACAAAAAAAQAAYAAAACAAEAAAAQAAcAAAACAAEAAAAQAAgAAAACAAEAAAAQAAkAAAACAAEAAAAQAAoAAAACAAEAAAAQAAsAAAACAAIAAAAEAAUAAAAAAAAAAAAEAAYAAAAAAAEAAAAEAAcAAAAAAAEAAAAEAAgAAAAAAAEAAAAEAAkAAAAAAAEAAAAEAAoAAAAAAAEAAAAEAAsAAAAAAAIAAAAFAAUAAAABAAAAAAAFAAYAAAABAAEAAAAFAAcAAAABAAEAAAAFAAgAAAABAAEAAAAFAAkAAAABAAEAAAAFAAoAAAABAAEAAAAFAAsAAAABAAIAAAAGAAUAAAABAAAAAAAGAAYAAAABAAEAAAAGAAcAAAABAAEAAAAGAAgAAAABAAEAAAAGAAkAAAABAAEAAAAGAAoAAAABAAEAAAAGAAsAAAABAAIAAAAHAAUAAAABAAAAAAAHAAYAAAABAAEAAAAHAAcAAAABAAEAAAAHAAgAAAABAAEAAAAHAAkAAAABAAEAAAAHAAoAAAABAAEAAAAHAAsAAAABAAIAAAAIAAUAAAABAAAAAAAIAAYAAAABAAEAAAAIAAcAAAABAAEAAAAIAAgAAAABAAEAAAAIAAkAAAABAAEAAAAIAAoAAAABAAEAAAAIAAsAAAABAAIAAAAJAAUAAAACAAAAAAAJAAYAAAACAAEAAAAJAAcAAAACAAEAAAAJAAgAAAACAAEAAAAJAAkAAAACAAEAAAAJAAoAAAACAAEAAAAJAAsAAAACAAIAAAASAAUAAAAAAAAAAAASAAYAAAAAAAEAAAASAAcAAAAAAAEAAAASAAgAAAAAAAEAAAASAAkAAAAAAAEAAAASAAoAAAAAAAEAAAASAAsAAAAAAAIAAAATAAUAAAABAAAAAAATAAYAAAABAAEAAAATAAcAAAABAAEAAAATAAgAAAABAAEAAAATAAkAAAABAAEAAAATAAoAAAABAAEAAAATAAsAAAABAAIAAAAUAAUAAAABAAAAAAAUAAYAAAABAAEAAAAUAAcAAAABAAEAAAAUAAgAAAABAAEAAAAUAAkAAAABAAEAAAAUAAoAAAABAAEAAAAUAAsAAAABAAIAAAAVAAUAAAABAAAAAAAVAAYAAAABAAEAAAAVAAcAAAABAAEAAAAVAAgAAAABAAEAAAAVAAkAAAABAAEAAAAVAAoAAAABAAEAAAAVAAsAAAABAAIAAAAWAAUAAAABAAAAAAAWAAYAAAABAAEAAAAWAAcAAAABAAEAAAAWAAgAAAABAAEAAAAWAAkAAAABAAEAAAAWAAoAAAABAAEAAAAWAAsAAAABAAIAAAAXAAUAAAACAAAAAAAXAAYAAAACAAEAAAAXAAcAAAACAAEAAAAXAAgAAAACAAEAAAAXAAkAAAACAAEAAAAXAAoAAAACAAEAAAAXAAsAAAACAAIAAAA=")
+tile_set = SubResource("TileSet_qiq50")
+
+[node name="Slot1" type="TextureButton" parent="." unique_id=630220684]
+offset_left = 192.0
+offset_top = 448.0
+offset_right = 254.0
+offset_bottom = 478.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("10_cb3wi")
+texture_pressed = ExtResource("11_di2pa")
+texture_hover = ExtResource("12_a280f")
+script = ExtResource("13_0yitc")
+
+[node name="Delete1" type="TextureButton" parent="." unique_id=1138476613]
+offset_left = 336.0
+offset_top = 448.0
+offset_right = 398.0
+offset_bottom = 478.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("18_gqu7d")
+texture_pressed = ExtResource("19_a2xko")
+script = ExtResource("13_0yitc")
+
+[node name="Label1" type="Label" parent="." unique_id=1805199335]
+offset_left = 200.0
+offset_top = 232.0
+offset_right = 424.0
+offset_bottom = 440.0
+theme_override_fonts/font = ExtResource("20_a2xko")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+
+[node name="Slot2" type="TextureButton" parent="." unique_id=1718034589]
+offset_left = 528.0
+offset_top = 448.0
+offset_right = 590.0
+offset_bottom = 478.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("10_cb3wi")
+texture_pressed = ExtResource("11_di2pa")
+texture_hover = ExtResource("12_a280f")
+script = ExtResource("13_0yitc")
+
+[node name="Delete2" type="TextureButton" parent="." unique_id=1128666816]
+offset_left = 672.0
+offset_top = 448.0
+offset_right = 734.0
+offset_bottom = 478.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("18_gqu7d")
+texture_pressed = ExtResource("19_a2xko")
+script = ExtResource("13_0yitc")
+
+[node name="Label2" type="Label" parent="." unique_id=1200514038]
+offset_left = 536.0
+offset_top = 232.0
+offset_right = 760.0
+offset_bottom = 440.0
+theme_override_fonts/font = ExtResource("20_a2xko")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+
+[node name="Slot3" type="TextureButton" parent="." unique_id=1356935633]
+offset_left = 864.0
+offset_top = 448.0
+offset_right = 926.0
+offset_bottom = 478.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("10_cb3wi")
+texture_pressed = ExtResource("11_di2pa")
+texture_hover = ExtResource("12_a280f")
+script = ExtResource("13_0yitc")
+
+[node name="Delete3" type="TextureButton" parent="." unique_id=498715516]
+offset_left = 1008.0
+offset_top = 448.0
+offset_right = 1070.0
+offset_bottom = 478.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("18_gqu7d")
+texture_pressed = ExtResource("19_a2xko")
+script = ExtResource("13_0yitc")
+
+[node name="Label3" type="Label" parent="." unique_id=523231307]
+offset_left = 872.0
+offset_top = 232.0
+offset_right = 1096.0
+offset_bottom = 440.0
+theme_override_fonts/font = ExtResource("20_a2xko")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+
+[node name="CancelBtn" type="TextureButton" parent="." unique_id=1063342510]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = -10.0
+grow_vertical = 0
+script = ExtResource("20_rxifb")
+
+[node name="RewriteConfirm" type="ConfirmationDialog" parent="." unique_id=1284052836]
+oversampling_override = 1.0
+title = "Перезаписать?"
+position = Vector2i(0, 36)
+size = Vector2i(497, 100)
+ok_button_text = "Перезаписать"
+dialog_text = "Вы уверены, что хотите перезаписать данное сохранение?"
+dialog_autowrap = true
+cancel_button_text = "Отменить"
+
+[connection signal="pressed" from="CancelBtn" to="CancelBtn" method="_on_pressed"]

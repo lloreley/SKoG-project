@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://11keoplifmt3"]
+
+[ext_resource type="AudioStream" uid="uid://y3k042lad1dy" path="res://res/sound/songs/main_menu_song.mp3" id="1_n6ne5"]
+[ext_resource type="Script" uid="uid://der4p6wsjx5b8" path="res://music_manager/music_manager.gd" id="2_q1f35"]
+
+[node name="MusicManager" type="AudioStreamPlayer" unique_id=1955083401]
+stream = ExtResource("1_n6ne5")
+volume_db = -15.0
+autoplay = true
+script = ExtResource("2_q1f35")

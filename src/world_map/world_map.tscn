@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bv1v52s7hjfg1" path="res://res/tiles/world_map/map1.png" id="1_6fgem"]
 [ext_resource type="Script" uid="uid://g6roqbvihxnu" path="res://world_map/world_map.gd" id="1_x2t8o"]
 [ext_resource type="Texture2D" uid="uid://cjfw0mimjipmu" path="res://res/tiles/world_map/map2.png" id="2_o45nt"]
+[ext_resource type="Texture2D" uid="uid://cbgjpwah2npiu" path="res://res/buttons/cancel/cancel2.png" id="2_vgeoc"]
 [ext_resource type="Texture2D" uid="uid://cdomun14fakp6" path="res://res/tiles/world_map/map11.png" id="3_0cguy"]
 [ext_resource type="Texture2D" uid="uid://ddjukny1qsw2r" path="res://res/tiles/world_map/map12.png" id="4_ugk1d"]
 [ext_resource type="Texture2D" uid="uid://bekperpaqoalt" path="res://res/tiles/world_map/map13.png" id="5_c5xur"]
@@ -72,7 +73,6 @@
 [ext_resource type="Texture2D" uid="uid://daasuwush286a" path="res://res/tiles/world_map/map10.png" id="69_wbujv"]
 [ext_resource type="Script" uid="uid://y6qlf8ptsatk" path="res://world_map/zero_level_btn.gd" id="70_o45nt"]
 [ext_resource type="Script" uid="uid://cp2kbr3nqu4pv" path="res://world_map/camera_2d.gd" id="71_0cguy"]
-[ext_resource type="AudioStream" uid="uid://y3k042lad1dy" path="res://res/sound/songs/main_menu_song.mp3" id="72_6k3jd"]
 [ext_resource type="Script" uid="uid://dd587uis465go" path="res://world_map/first_level_btn.gd" id="72_erk61"]
 [ext_resource type="Script" uid="uid://c7v41s8hibt08" path="res://world_map/second_level_btn.gd" id="73_vgeoc"]
 [ext_resource type="AudioStream" uid="uid://dtk5g35bsibol" path="res://res/sound/sfx/button_hover.mp3" id="73_x2t8o"]
@@ -498,6 +498,7 @@ sources/68 = SubResource("TileSetAtlasSource_natnj")
 
 [node name="WorldMap" type="Node2D" unique_id=521669163]
 script = ExtResource("1_x2t8o")
+locked_texture = ExtResource("2_vgeoc")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=896712664]
 y_sort_enabled = true
@@ -520,10 +521,10 @@ offset_bottom = 238.0
 script = ExtResource("72_erk61")
 
 [node name="SecondLevelBtn" type="TextureButton" parent="." unique_id=1352637639]
-offset_left = 358.0
-offset_top = 338.0
-offset_right = 448.0
-offset_bottom = 428.0
+offset_left = -44.0
+offset_top = 426.0
+offset_right = 46.0
+offset_bottom = 516.0
 script = ExtResource("73_vgeoc")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1806971604]
@@ -533,12 +534,6 @@ limit_top = -500
 limit_right = 1800
 limit_bottom = 900
 script = ExtResource("71_0cguy")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1132259274]
-stream = ExtResource("72_6k3jd")
-volume_db = -15.0
-autoplay = true
-parameters/looping = true
 
 [node name="HoverSound" type="AudioStreamPlayer" parent="." unique_id=938202194]
 stream = ExtResource("73_x2t8o")
@@ -550,3 +545,4 @@ volume_db = -10.0
 
 [connection signal="pressed" from="ZeroLevelBtn" to="." method="_on_zero_level_btn_pressed"]
 [connection signal="pressed" from="FirstLevelBtn" to="." method="_on_first_level_btn_pressed"]
+[connection signal="pressed" from="SecondLevelBtn" to="." method="_on_second_level_btn_pressed"]
